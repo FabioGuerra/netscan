@@ -119,7 +119,7 @@ if __name__ == "__main__":
             scan_result = nmap_scan(ip=host[Constantes.IP])
             pprint.pprint(scan_result[Constantes.SCAN])
 
-            with open("Constantes.OUTPUT_FILE", "a") as saida:
+            with open(Constantes.OUTPUT_FILE, "a") as saida:
                 saida.write(f"\nHost: {host[Constantes.IP]} -> {host[Constantes.VENDOR]}\n")
                 saida.write(str(pprint.pformat(scan_result[Constantes.SCAN])))
                 saida.write("\n")
